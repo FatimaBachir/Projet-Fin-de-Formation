@@ -1,0 +1,693 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    background: fixed;
+    
+}
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 6, 6);
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 10px;
+    width: 100%;
+    position: fixed;
+    z-index: 900;
+}
+h1{
+    color: beige;
+
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0;
+}
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: beige;
+    padding: 8px 25px;
+    transition: all .5s ease;
+    font-size: 11px;
+}
+.navbar ul li a:hover{
+    background-color: beige;
+    color: black;
+    box-shadow: 0 0 10px white;
+    transform: scale(1.2);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar ul li a{
+      float: none;
+      width: 100%;
+      flex-direction: column;
+      flex: 20%;
+    }
+  }
+
+
+/*--------------------------------------------------------------
+# PROFILE
+--------------------------------------------------------------*/
+
+#Profile{
+    width: 100%;
+    padding: 60px 8%;
+    background-color: beige;
+}
+#Profile .profile_content{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+    margin: 16PX;
+}
+.profile_content .imageSection{
+    position: relative;
+    min-width: 243px;
+    height: 337px;
+    margin: 16PX;
+        
+
+}
+.imageSection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+
+}
+.profile_content .imageSection::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: 3px solid rgb(63, 5, 5);
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+
+}
+.infoSection h1{
+    color: rgb(63, 5, 5);
+    font-size: 30px;
+    font-family:  helvetica;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+}
+.infoSection h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background-color: #aaabb0;
+}
+.infoSection h1::after{
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0px;
+    background-color: rgb(63, 5, 5);
+}
+.infoSection h2{
+    font-family: helvatica;
+    font-size: 20px;
+    font-weight: 600px;
+    color: rgb(77, 6, 6);
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.infoSection p{
+    color: rgb(77, 6, 6);
+    font-size: 20px;
+    line-height: 1.2;
+    font-family: 'Aboreto', cursive;
+    text-align: justify;
+    padding-bottom: 8px;
+}
+.infoPersonel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 20px;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-bottom: 1px solid #555;
+}
+.infoPersonel div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.infoPersonel div span{
+    color: rgb(77, 6, 6);
+    letter-spacing: 1px;
+    
+}
+.infoSection button{
+    min-width: 150px;
+    padding: 8px 18px;
+    border: 1px solid rgb(63, 5, 5);
+    border-radius: 25px;
+    font-size: 18px;
+    background-color: transparent;
+    color: rgb(139, 43, 43);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 20px;
+}
+.infoSection button:hover{
+    color: rgb(48, 4, 4);
+    border-color: #aaabb0;
+    transition:  transform .4s;
+}
+.infoSection button:hover{
+    transform: scale(1.2);
+} 
+@media screen {
+    
+} 
+ 
+
+/*--------------------------------------------------------------
+# FORMATION ET EXPERIENCE
+--------------------------------------------------------------*/
+#formation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    padding: 35px 10%;
+    background-color: rgb(77, 6, 6);
+}
+main .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+.col header.title{
+    font-family: helvetica;
+    color: beige; 
+}
+.col .contents{
+    padding: 0px 30px;
+    border-left: 2px solid #bababa;
+}
+.col .contents .box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: beige;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+.col .contents .box:hover{
+    box-shadow: 0px 3px 20px 0px #ccc;
+    border: 1px solid transparent; 
+}
+.col .contents .box::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 25px);
+    top: 0;
+    background-color: beige;
+    border: 2px solid white;
+}
+.box h4{
+    position: relative;
+    color: rgb(77, 6, 6);
+}
+.box h3{
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    font-family: helvetica;
+    color: rgb(77, 6, 6);
+}
+.box p{
+    line-height: 1.2;
+    color: rgb(77, 6, 6);
+    font-size: 20px; 
+
+}
+@media only screen and (max-width: 600px) {
+    .box {
+      background: red;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .contents {
+      flex-direction: column;
+    }
+  }
+ /*--------------------------------------------------------------
+# Competences
+--------------------------------------------------------------*/   
+#competence{
+    width: 100%;
+    height: auto;
+    padding: 80px 13%;
+    background-color: beige;
+}
+.header{
+    width: 100%;
+    margin-bottom: 70px;
+    display: grid;
+    place-items: center;
+    text-align: center; 
+
+}
+.header h2{
+    margin-bottom: -5px;
+    font-size: 40px;  
+}
+.header h2 span{
+    color: rgb(139, 43, 43);
+}
+.header p{
+    color: rgb(63, 5, 5);
+    font-size: 25px;
+}
+.competence-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+
+}
+.competence-main .competence-bar .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.competence-bar .info .pourcent{
+    font-weight: bold;
+}
+.competence-bar .bar{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: #bababa;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+.competence-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(77, 6, 6);
+    border-radius: 25px;
+    
+}
+.competence-bar .bar .html{
+    width: 70%;
+    animation: html 3s;
+}
+@keyframes html{
+    0%{
+        width: 0;
+    }100%{
+        width: 70%;
+}
+}
+.competence-bar .bar .css{
+    width: 60%;
+    animation: css 3s;
+}
+@keyframes css{
+    0%{
+        width: 0;
+    }100%{
+        width: 60%;
+}
+}
+.competence-bar .bar .php{
+    width: 30%;
+    animation: php 3s;
+}
+@keyframes php{
+    0%{
+        width: 0;
+    }100%{
+        width: 30%;
+}
+}
+.competence-bar .bar .mysql{
+    width: 40%;
+    animation: mysql 3s;
+}
+@keyframes mysql{
+    0%{
+        width: 0;
+    }100%{
+        width: 40%;
+}
+}
+.competence-bar .bar .photoshop{
+    width: 30%;
+    animation: photoshop 3s;
+}
+@keyframes photoshop{
+    0%{
+        width: 0;
+    }100%{
+        width: 30%;
+}
+}
+.competence-bar .bar .comptable{
+    width: 50%;
+    animation: comptable 3s;
+}
+@keyframes comptable{
+    0%{
+        width: 0;
+    }100%{
+        width: 50%;
+}
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# QualitésPersonnelles
+--------------------------------------------------------------*/  
+#quapers{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(77, 6, 6);
+    padding: 110px;
+  }
+  #quapers h1{
+    font-size: 40px;
+    color: beige;
+    display: flexbox;
+  }
+  #quapers span{
+    color: rgb(245, 245, 187);
+  }
+  .q-container ul{
+    position: relative;
+    transform: skewY(-15deg);
+  }
+  .q-container ul li{
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background-color: beige;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+  }
+  .q-container ul li:hover{
+    background-color: wheat;
+    transform: translateX(50px);
+  }
+  .q-container ul li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background-color: beige;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+  }
+  .q-container ul li:hover:before{
+    background-color: white;
+  
+  }
+  .q-container ul li::after{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: beige;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+  }
+  .q-container ul li:hover::after{
+    background-color: rgb(240, 232, 232);
+  
+  }
+  .q-container ul li a{
+    text-decoration: none;
+    color: rgb(77, 6, 6);
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+  }
+  .q-container ul li:hover a{
+    color: #fff;
+  }
+  .q-container ul li:last-child::after{
+    box-shadow: -120px 120px 20px rgb(139, 43, 43);
+  } 
+
+
+/*--------------------------------------------------------------
+# References
+--------------------------------------------------------------*/ 
+#references{
+     width: 100%;
+     padding: 60px 8%;
+     display: grid;
+     height: 100%;
+     place-items: center;
+    background: beige;
+       
+}
+#references h1{
+    color: rgb(77, 6, 6);
+    font-size: 30px;
+    font-family:  helvetica;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration: overline underline;
+    text-shadow: 2px 2px;
+}
+
+.wrapper{
+   
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .box{
+    background: rgb(77, 6, 6);
+    border-radius: 3px;
+    padding: 27px;
+    width: calc(52% - 13px);
+    margin: 23PX;
+}
+.wrapper .box i.quote{
+    font-size: 20px;
+    color: beige;
+}
+.wrapper .box p{
+    color: beige;
+    font-size: 10px;
+}
+.wrapper .box .content{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .box .info .name{
+     font-size: 13px;
+     font-weight: 600;
+     color: beige;
+}
+.wrapper .box .info .job{
+    color: beige;
+    font-size: 13px;
+    font-weight: 500;
+}
+.wrapper .box .info .stars{
+    margin-top: 2px;
+}
+.box .info .stars i{
+    color: beige;
+}
+.wrapper .box .content .image{
+    height: 75px;
+    width: 75px;
+    padding: 3px;
+    background: beige;
+    border-radius: 50%;
+}
+.box .content .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Centre D'interet
+--------------------------------------------------------------*/ 
+
+#centredinteret{
+    width: 100%;
+    height: auto;
+    padding: 80px 13%;
+    background-color: rgb(77, 6, 6);
+}
+#centredinteret h1{
+    color: beige;
+    font-size: 30px;
+    font-family:  helvetica;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration: underline;
+    text-shadow: 2px 2px;
+  }
+  .centre ul li{
+    font-size: 30px;
+    color: beige;
+    align-items: center;
+    cursor: pointer;
+    transition:  transform .4s;
+  }
+  .centre ul li:hover{
+    transform: scale(1.2);
+  }
+  
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/ 
+footer{
+    background: beige;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: rgb(77, 6, 6);
+    
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 23px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: rgb(77, 6, 6);
+}
+.socials a i{
+    font-size: 1.7rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: rgb(199, 35, 35);
+    transition:  transform .4s;
+}
+.socials a:hover i{
+    transform: scale(1.2);
+}
+
+.footer-bottom{
+    background: beige;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 20px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: rgb(77, 6, 6);
+
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
